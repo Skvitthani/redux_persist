@@ -1,4 +1,7 @@
 {
   "name": "redux_persist",
-  "displayName": "redux_persist"
+  "displayName": "redux_persist",
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-2707543225208027~9973388471"
+  }
 }
