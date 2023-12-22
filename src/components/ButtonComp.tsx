@@ -3,12 +3,16 @@ import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 interface CustomButton {
   title?: string;
+  buttonCompTestCase?: string;
   onPress?: () => void;
 }
 
-const ButtonComp = ({title, onPress}: CustomButton) => {
+const ButtonComp = ({title, onPress, buttonCompTestCase}: CustomButton) => {
   return (
-    <TouchableOpacity style={[styles.buttonStyle]} onPress={onPress}>
+    <TouchableOpacity
+      testID={buttonCompTestCase}
+      style={[styles.buttonStyle]}
+      onPress={onPress}>
       <Text style={styles.textInput}>{title}</Text>
     </TouchableOpacity>
   );

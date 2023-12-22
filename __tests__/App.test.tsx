@@ -1,17 +1,42 @@
-/**
- * @format
- */
-
 import 'react-native';
-import React from 'react';
 import App from '../App';
-
-// Note: import explicitly to use the types shipped with jest.
+import React from 'react';
 import {it} from '@jest/globals';
+import {render} from '@testing-library/react-native';
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+jest.mock('@react-native-async-storage/async-storage', () => jest.fn());
+jest.mock('@react-navigation/native-stack', () => ({
+  createNativeStackNavigator: () => ({
+    Navigator: 'mocked-Navigator',
+    Screen: 'mocked-Screen',
+  }),
+}));
 
-it('renders correctly', () => {
-  renderer.create(<App />);
+jest.mock('react-redux', () => ({
+  Provider: jest.fn(),
+}));
+
+jest.mock('redux-persist', () => ({
+  persistReducer: jest.fn(),
+  persistStore: jest.fn(),
+}));
+
+jest.mock('react-native-google-mobile-ads', () => ({
+  TestIds: jest.fn().mockReturnValue({
+    createForAdRequest: jest.fn(),
+  }),
+}));
+jest.mock('redux', () => ({
+  combineReducers: jest.fn(),
+  applyMiddleware: jest.fn(),
+  createStore: jest.fn(),
+}));
+
+const component = <App />;
+
+describe('App', () => {
+  it('renders correctly', () => {
+    const container = render(component);
+    expect(container.toJSON()).toMatchSnapshot();
+  });
 });

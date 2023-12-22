@@ -4,8 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 // Screen
-import GetUserData from '../screens/GetUserData';
-import AddUserDataScreen from '../screens/AddUserDataScreen';
+import GetUserData from '../screens/getUserData/GetUserData';
+import AddUserDataScreen from '../screens/addUserDataScreen/AddUserDataScreen';
 
 // Type
 import {DealerNavigNavigationType} from '.';

@@ -1,9 +1,9 @@
 import React from 'react';
-import {RootState, flatListItem} from '.';
-import ButtonComp from '../components/ButtonComp';
+import {RootState, flatListItem} from '..';
+import ButtonComp from '../../components/ButtonComp';
 import {useDispatch, useSelector} from 'react-redux';
-import {DELETE_DATA} from '../redux/types/Actiontype';
-import {DealerNavigNavigationType} from '../navigation';
+import {DELETE_DATA} from '../../redux/types/Actiontype';
+import {DealerNavigNavigationType} from '../../navigation';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
@@ -17,13 +17,12 @@ type AddUserDataScreen = NativeStackScreenProps<
 const GetUserData: React.FC<AddUserDataScreen> = ({navigation}) => {
   const dispatch = useDispatch();
   const Userdata = useSelector((state: RootState) => state?.user?.UserData);
-
   const renderItem = ({item}: {item: flatListItem}) => {
     return (
       <View style={styles.renderItemView}>
-        <Text style={styles.textStyle}>{`Name  : ${item?.name}`}</Text>
-        <Text style={styles.textStyle}>{`City      : ${item?.city}`}</Text>
-        <Text style={styles.textStyle}>{`Age      : ${item?.age}`}</Text>
+        <Text style={styles.textStyle}>{`Name:${item?.name}`}</Text>
+        <Text style={styles.textStyle}>{`City:${item?.city}`}</Text>
+        <Text style={styles.textStyle}>{`Age:${item?.age}`}</Text>
       </View>
     );
   };
@@ -45,13 +44,18 @@ const GetUserData: React.FC<AddUserDataScreen> = ({navigation}) => {
   return (
     <View style={styles.container}>
       <FlatList
+        // testID="List_Data_FlatList"
         contentContainerStyle={{flex: 1}}
         data={Userdata}
         renderItem={renderItem}
         ListEmptyComponent={ListEmptyComponent}
       />
       <View style={styles.buttonView}>
-        <ButtonComp onPress={onDeleteDataPress} title="Delete Data" />
+        <ButtonComp
+          buttonCompTestCase="delete_data_button"
+          onPress={onDeleteDataPress}
+          title="Delete Data"
+        />
       </View>
     </View>
   );

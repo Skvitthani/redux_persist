@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddUserDataScreen renders correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#3A4D39",
+      "flex": 1,
+    }
+  }
+>
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Enter Name"
+    placeholderTextColor="black"
+    style={
+      [
+        {
+          "backgroundColor": "#FCF5ED",
+          "borderRadius": 15,
+        },
+        {
+          "color": "black",
+          "fontSize": 15,
+          "marginHorizontal": 10,
+          "marginTop": 10,
+          "padding": 10,
+        },
+      ]
+    }
+    testID="name_text_input"
+    value=""
+  />
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Enter Age"
+    placeholderTextColor="black"
+    style={
+      [
+        {
+          "backgroundColor": "#FCF5ED",
+          "borderRadius": 15,
+        },
+        {
+          "color": "black",
+          "fontSize": 15,
+          "marginHorizontal": 10,
+          "marginTop": 10,
+          "padding": 10,
+        },
+      ]
+    }
+    testID="age_text_input"
+    value=""
+  />
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Enter City"
+    placeholderTextColor="black"
+    style={
+      [
+        {
+          "backgroundColor": "#FCF5ED",
+          "borderRadius": 15,
+        },
+        {
+          "color": "black",
+          "fontSize": 15,
+          "marginHorizontal": 10,
+          "marginTop": 10,
+          "padding": 10,
+        },
+      ]
+    }
+    testID="city_text_input"
+    value=""
+  />
+  <View
+    style={
+      {
+        "marginTop": 20,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#706233",
+          "borderRadius": 20,
+          "marginHorizontal": 30,
+          "opacity": 1,
+          "padding": 20,
+        }
+      }
+      testID="add_user_data"
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 20,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Add
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "marginTop": 20,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#706233",
+          "borderRadius": 20,
+          "marginHorizontal": 30,
+          "opacity": 1,
+          "padding": 20,
+        }
+      }
+      testID="get_user_data"
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 20,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Go to next screen
+      </Text>
+    </View>
+  </View>
+</View>
+`;
