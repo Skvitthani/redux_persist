@@ -44,7 +44,6 @@ const GetUserData: React.FC<AddUserDataScreen> = ({navigation}) => {
   return (
     <View style={styles.container}>
       <FlatList
-        // testID="List_Data_FlatList"
         contentContainerStyle={{flex: 1}}
         data={Userdata}
         renderItem={renderItem}

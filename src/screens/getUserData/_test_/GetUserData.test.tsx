@@ -1,5 +1,6 @@
 import 'react-native';
 import React from 'react';
+import {flatListItem} from '../..';
 import GetUserData from '../GetUserData';
 import {fireEvent, render, waitFor} from '@testing-library/react-native';
 
@@ -37,11 +38,4 @@ describe('GetUserData', () => {
     const container = getByTestId('delete_data_button');
     fireEvent.press(container);
   });
-
-  // it('FlatList render list', async () => {
-  //   const {getByTestId} = render(component);
-  //   await waitFor(() => getByTestId('List_Data_FlatList'));
-  //   const container = getByTestId('List_Data_FlatList');
-  //   expect(container).toBeDefined();
-  // });
 });

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {StyleSheet, View} from 'react-native';
-import {userData} from '../../redux/actios/Action';
+import {UaserDataAction} from '../../redux/actios/Action';
 import ButtonComp from '../../components/ButtonComp';
 import InputTextComp from '../../components/InputTextComp';
 import {DealerNavigNavigationType} from '../../navigation';
@@ -26,7 +26,7 @@ const AddUserDataScreen: React.FC<AddUserDataScreen> = ({navigation}) => {
       name: name,
       city: city,
     };
-    dispatch(userData(userDetails));
+    dispatch(UaserDataAction(userDetails) as any);
     setAge('');
     setName('');
     setCity('');
